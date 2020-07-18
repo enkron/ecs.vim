@@ -73,7 +73,7 @@ hi Label            ctermfg=186     ctermbg=NONE    cterm=NONE
 hi Number           ctermfg=173     ctermbg=NONE    cterm=NONE     
 hi Operator         ctermfg=117     ctermbg=NONE    cterm=NONE     
 hi PreCondit        ctermfg=140     ctermbg=NONE    cterm=NONE     
-hi PreProc          ctermfg=140     ctermbg=NONE    cterm=NONE     
+hi PreProc          ctermfg=160     ctermbg=NONE    cterm=NONE
 hi Repeat           ctermfg=140     ctermbg=NONE    cterm=NONE     
 hi Special          ctermfg=117     ctermbg=NONE    cterm=NONE     
 hi SpecialComment   ctermfg=242     ctermbg=NONE    cterm=NONE     
