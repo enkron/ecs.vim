@@ -1,5 +1,5 @@
 " Author:       Sergei Belokon <srj.belokon@gmail.com>
-" Repository:   https://github.com/enkron/stsc
+" Repository:   https://github.com/enkron/vim-avarice
 " Version:      0.1
 
 set background=dark
@@ -10,7 +10,7 @@ if version > 580
     endif
 endif
 set t_Co=256
-let g:colors_name = "stsc"
+let g:colors_name = "vim-avarice"
 
 """""""""""""""""""""""
 " General
