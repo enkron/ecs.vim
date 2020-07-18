@@ -9,7 +9,7 @@ to install this scheme, the following ways could be used:
 - use [Vundle](https://github.com/VundleVim/Vundle.vim#quick-start) by adding
 to `.vimrc` Vundle plugin section:
 
-        Plugin 'enkron/vim-avarice'
+        Plugin 'enkron/ecs.vim'
 
     then run `:PluginInstall`.
 
@@ -18,7 +18,7 @@ or
 - use [vim-plug](https://github.com/junegunn/vim-plug#installation) by adding
 to `.vimrc` vim-plug section:
 
-        Plug 'enkron/vim-avarice'
+        Plug 'enkron/ecs.vim'
 
     then run `:PlugInstall`.
 
@@ -29,7 +29,7 @@ or
     run the following in a terminal:
 
         cd ~/.vim/bundle
-        git clone https://github.com/enkron/vim-avarice
+        git clone https://github.com/enkron/ecs.vim
 
 ## usage
 
@@ -38,5 +38,5 @@ after installation, put next code to `.vimrc`:
 ```viml
 set t_Co=256
 syntax on
-colorscheme vim-avarice
+colorscheme ecs
 ```
