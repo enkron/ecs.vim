@@ -24,10 +24,10 @@ hi CursorLineNr ctermfg=darkgrey ctermbg=black cterm=bold term=bold guifg=darkgr
 hi Directory ctermfg=darkblue guifg=darkblue
 hi ErrorMsg ctermfg=white ctermbg=red cterm=bold term=bold guifg=red
 hi WarningMsg ctermfg=red ctermbg=NONE guifg=red
-hi MatchParen ctermfg=lightcyan ctermbg=NONE cterm=bold term=bold guifg=lightcyan
+hi MatchParen ctermfg=white ctermbg=brown cterm=bold term=bold guifg=lightcyan
 hi MoreMsg ctermfg=grey guifg=grey
 hi NonText ctermfg=grey guifg=grey
-hi Search ctermfg=lightblue ctermbg=black cterm=bold term=bold guifg=lightblue
+hi Search ctermfg=white ctermbg=brown cterm=bold term=bold guifg=brown
 hi link IncSearch Search
 hi StatusLine ctermbg=gray ctermfg=black guifg=black
 hi VertSplit ctermfg=black ctermbg=NONE cterm=bold term=bold guifg=black
@@ -39,7 +39,7 @@ hi Visual ctermfg=lightblue ctermbg=black cterm=bold term=bold guifg=lightblue
 hi Comment ctermfg=darkgrey guifg=darkgrey
 
 hi Constant term=bold cterm=bold ctermfg=darkblue guifg=darkblue
-hi String ctermfg=darkred guifg=darkred
+hi String ctermfg=lightgrey guifg=lightgrey
 hi Character ctermfg=brown guifg=brown
 hi Number ctermfg=red cterm=bold term=bold guifg=red
 hi Boolean ctermfg=brown cterm=bold term=bold guifg=brown
@@ -51,7 +51,7 @@ hi PmenuSel ctermfg=darkred ctermbg=black cterm=bold term=bold guifg=darkred
 hi Identifier ctermfg=lightblue ctermbg=NONE cterm=NONE term=NONE guifg=blue
 hi Function ctermfg=darkcyan ctermbg=NONE guifg=darkcyan
 
-hi Statement ctermfg=lightblue guifg=lightmagenta
+hi Statement ctermfg=lightblue guifg=lightblue
 hi link Conditional Statement
 hi link Repeat Statement
 hi link Exception Statement
