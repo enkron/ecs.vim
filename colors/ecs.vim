@@ -91,4 +91,4 @@ hi Error ctermfg=darkmagenta ctermbg=NONE cterm=italic guifg=darkmagenta
 
 hi DiffChange ctermfg=white ctermbg=brown guifg=white
 
-hi Folded ctermfg=black ctermbg=white cterm=bold guifg=black
+hi Folded ctermfg=white ctermbg=NONE cterm=bold guifg=black
