@@ -46,8 +46,8 @@ hi Number ctermfg=brown guifg=brown
 hi Boolean ctermfg=brown cterm=bold term=bold guifg=brown
 hi Float ctermfg=brown cterm=bold term=bold guifg=brown
 
-hi Pmenu ctermfg=grey ctermbg=white guifg=white
-hi PmenuSel ctermfg=darkblue ctermbg=white cterm=bold term=bold guifg=darkblue
+hi Pmenu ctermfg=grey ctermbg=black guifg=grey
+hi PmenuSel ctermfg=darkblue ctermbg=black cterm=bold term=bold guifg=darkblue
 
 hi Identifier ctermfg=darkblue ctermbg=NONE cterm=NONE term=NONE guifg=blue
 hi Function ctermfg=white cterm=bold  guifg=white
