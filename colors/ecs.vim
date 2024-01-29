@@ -37,7 +37,7 @@ hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=blue
 "                         Syntax Highlighting                          "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi Comment ctermfg=grey cterm=italic guifg=grey
-hi SpecialComment ctermfg=darkgrey cterm=italic guifg=darkgrey
+hi SpecialComment ctermfg=lightgrey cterm=italic guifg=lightgrey
 
 hi Constant ctermfg=blue term=bold cterm=bold guifg=NONE
 hi String ctermfg=white cterm=italic guifg=white
