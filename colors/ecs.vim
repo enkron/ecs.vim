@@ -1,7 +1,7 @@
 " Vim color file
 " Maintainer:   Sergei Belokon <srj.belokon@gmail.com>
 " Repository:   https://github.com/enkron/ecs.vim
-" Last Change:  2024 Jan 13
+" Last Change:  2024 Jan 31
 
 set bg=dark
 hi clear
@@ -86,7 +86,7 @@ hi SpellCap ctermfg=red ctermbg=NONE guifg=white
 hi SpellRare ctermfg=red ctermbg=NONE guifg=white
 hi SpellLocal ctermfg=red ctermbg=NONE guifg=white
 
-hi Todo ctermfg=white ctermbg=lightgray cterm=bold,italic guifg=white
+hi Todo ctermfg=grey ctermbg=darkgrey cterm=bold,italic guifg=white
 hi Error ctermfg=darkmagenta ctermbg=NONE cterm=italic guifg=darkmagenta
 
 hi DiffChange ctermfg=white ctermbg=brown guifg=white
