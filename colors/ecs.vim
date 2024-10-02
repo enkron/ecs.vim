@@ -16,7 +16,7 @@ let g:colors_name = "ecs"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi Normal ctermfg=white ctermbg=NONE guifg=NONE
 
-hi ModeMsg ctermfg=white ctermbg=black term=bold guifg=darkcyan
+hi ModeMsg ctermfg=black ctermbg=white cterm=bold,italic guifg=black
 hi Cursor ctermfg=NONE guifg=NONE
 hi LineNr ctermfg=darkgray ctermbg=NONE guifg=darkgray
 hi CursorLine ctermfg=NONE ctermbg=darkgray cterm=NONE term=NONE guifg=NONE
