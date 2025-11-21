@@ -97,3 +97,5 @@ hi Error ctermfg=darkmagenta ctermbg=NONE cterm=italic guifg=#9933ff guibg=NONE
 hi DiffChange ctermfg=white ctermbg=brown guifg=#ffffff guibg=#999900
 
 hi Folded ctermfg=white ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
+
+hi vimGroupName ctermfg=brown ctermbg=NONE cterm=bold guifg=#999900 guibg=NONE
