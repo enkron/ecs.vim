@@ -39,7 +39,7 @@ hi VertSplit ctermfg=white ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg
 hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=#339999 guibg=#666666
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                         Syntax Highlighting                          "
+"                         Generic Syntax Highlighting                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi Comment ctermfg=grey cterm=italic guifg=#666666 guibg=NONE
 hi SpecialComment ctermfg=lightgrey cterm=italic guifg=#cccccc guibg=NONE
@@ -92,10 +92,15 @@ hi SpellRare ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
 hi SpellLocal ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
 
 hi Todo ctermfg=grey ctermbg=darkgrey cterm=bold,italic guifg=#666666 guibg=#666666
-hi Error ctermfg=darkmagenta ctermbg=NONE cterm=italic guifg=#9933ff guibg=NONE
+hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
 
 hi DiffChange ctermfg=white ctermbg=brown guifg=#ffffff guibg=#999900
 
 hi Folded ctermfg=white ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       Language Syntax Highlighting                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi vimGroupName ctermfg=brown ctermbg=NONE cterm=bold guifg=#999900 guibg=NONE
+hi vimGroup ctermfg=brown ctermbg=NONE cterm=bold guifg=#999900 guibg=NONE
