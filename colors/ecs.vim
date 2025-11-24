@@ -96,11 +96,9 @@ hi SpellLocal ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
 
 hi Todo ctermfg=grey ctermbg=darkgrey cterm=bold,italic guifg=#666666 guibg=#666666
 hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
-
 hi DiffChange ctermfg=white ctermbg=brown guifg=#ffffff guibg=#3972a8
-
 hi Folded ctermfg=white ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
-
+hi Title ctermfg=88 ctermbg=NONE cterm=bold guifg=#990000 guibg=NONE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       Language Syntax Highlighting                   "
