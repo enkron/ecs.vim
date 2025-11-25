@@ -30,7 +30,7 @@ hi WarningMsg ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
 hi MatchParen ctermfg=darkcyan ctermbg=black cterm=bold term=bold guifg=#ffffff guibg=#990000
 hi MoreMsg ctermfg=black guifg=#000000 guibg=NONE
 hi NonText ctermfg=grey guifg=#666666 guibg=NONE
-hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#339999 guibg=#666666
+hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#990000 guibg=#1a1a1a
 hi link IncSearch Search
 hi StatusLine ctermbg=black ctermfg=lightgray guifg=#1a1a1a guibg=#1a1a1a
 hi User1 ctermfg=black ctermbg=lightgray cterm=NONE guifg=#ffffff guibg=#1a1a1a
@@ -39,7 +39,7 @@ hi User3 ctermfg=black ctermbg=lightgray cterm=bold guifg=#ffffff guibg=#1a1a1a
 hi User4 ctermfg=lightgray ctermbg=black cterm=bold guifg=#cccccc guibg=#1a1a1a
 hi User5 ctermfg=brown ctermbg=lightgray cterm=bold guifg=#63443b guibg=#1a1a1a
 hi VertSplit ctermfg=white ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg=NONE
-hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=#339999 guibg=#666666
+hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=NONE guibg=#1a1a1a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Generic Syntax Highlighting                  "
