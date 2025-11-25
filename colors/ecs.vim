@@ -52,7 +52,7 @@ hi Constant ctermfg=blue term=bold cterm=bold guifg=#6e6ec4 guibg=NONE
 hi String ctermfg=white cterm=italic guifg=#ffffff guibg=NONE
 hi Character ctermfg=brown guifg=#3972a8 guibg=NONE
 hi Number ctermfg=brown guifg=#3972a8 guibg=NONE
-hi Boolean ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
+hi Boolean ctermfg=brown cterm=bold term=bold guifg=#965949 guibg=NONE
 hi Float ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
 
 hi Pmenu ctermfg=grey ctermbg=black guifg=#666666 guibg=#000000
