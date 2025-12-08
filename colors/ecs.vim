@@ -55,8 +55,8 @@ hi Number ctermfg=brown guifg=#3972a8 guibg=NONE
 hi Boolean ctermfg=brown cterm=bold term=bold guifg=#965949 guibg=NONE
 hi Float ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
 
-hi Pmenu ctermfg=grey ctermbg=black guifg=#666666 guibg=#000000
-hi PmenuSel ctermfg=darkblue ctermbg=black cterm=bold term=bold guifg=#3333ff guibg=#000000
+hi Pmenu ctermfg=grey ctermbg=black guifg=#666666 guibg=NONE
+hi PmenuSel ctermfg=darkblue ctermbg=black guifg=#96653a guibg=NONE
 
 hi Identifier ctermfg=darkblue ctermbg=NONE cterm=NONE term=NONE guifg=#3333ff guibg=NONE
 hi Function ctermfg=white cterm=bold guifg=#ffffff guibg=NONE
