@@ -134,3 +134,23 @@ hi markdownUrlTitle ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=
 hi markdownBlockquote ctermfg=grey ctermbg=NONE cterm=italic guifg=#666666 guibg=NONE
 hi markdownListMarker ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
 hi markdownRule ctermfg=grey ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
+
+" YAML
+hi yamlBlockMappingKey ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi link yamlFlowMappingKey yamlBlockMappingKey
+hi yamlKeyValueDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi yamlBlockCollectionItemStart ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi yamlFlowIndicator ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi yamlFlowString ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
+hi yamlFlowStringDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi yamlDocumentStart ctermfg=grey ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
+hi link yamlDocumentEnd yamlDocumentStart
+hi yamlBool ctermfg=brown ctermbg=NONE cterm=bold guifg=#965949 guibg=NONE
+hi link yamlNull yamlBool
+hi yamlAnchor ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3f6969 guibg=NONE
+hi yamlAlias ctermfg=darkcyan ctermbg=NONE cterm=italic guifg=#3f6969 guibg=NONE
+hi link yamlNodeTag yamlAnchor
+hi yamlBlockMappingMerge ctermfg=darkcyan ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
+hi link yamlFlowMappingMerge yamlBlockMappingMerge
+hi yamlMappingKeyStart ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi yamlBlockScalarHeader ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
