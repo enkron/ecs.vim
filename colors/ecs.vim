@@ -90,10 +90,10 @@ hi Tag ctermfg=darkblue guifg=#3333ff guibg=NONE
 hi Delimeter ctermfg=brown guifg=#3972a8 guibg=NONE
 
 hi SpecialKey ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
-hi SpellBad ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi SpellCap ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi SpellRare ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi SpellLocal ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
+hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#990000
+hi SpellCap ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#3972a8
+hi SpellRare ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#3f6969
+hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#666666
 
 hi Todo ctermfg=grey ctermbg=darkgrey cterm=bold,italic guifg=#666666 guibg=#666666
 hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
