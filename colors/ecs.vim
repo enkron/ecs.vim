@@ -100,9 +100,37 @@ hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
 hi DiffChange ctermfg=white ctermbg=brown guifg=#ffffff guibg=#3972a8
 hi Folded ctermfg=white ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
 hi Title ctermfg=88 ctermbg=NONE cterm=bold guifg=#990000 guibg=NONE
+hi Underlined ctermfg=blue ctermbg=NONE cterm=underline guifg=#6e6ec4 guibg=NONE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       Language Syntax Highlighting                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi vimGroupName ctermfg=brown ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
 hi vimGroup ctermfg=brown ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
+
+" Markdown
+hi markdownH1 ctermfg=brown ctermbg=NONE cterm=bold guifg=#96653a guibg=NONE
+hi markdownH2 ctermfg=brown ctermbg=NONE cterm=bold guifg=#965949 guibg=NONE
+hi markdownH3 ctermfg=blue ctermbg=NONE cterm=bold guifg=#6e6ec4 guibg=NONE
+hi markdownH4 ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3f6969 guibg=NONE
+hi link markdownH5 markdownH4
+hi link markdownH6 markdownH4
+hi markdownHeadingDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+
+hi markdownBold ctermfg=white ctermbg=NONE cterm=bold guifg=#cccccc guibg=NONE
+hi markdownItalic ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
+hi markdownBoldItalic ctermfg=white ctermbg=NONE cterm=bold,italic guifg=#cccccc guibg=NONE
+hi markdownStrike ctermfg=grey ctermbg=NONE cterm=strikethrough guifg=#666666 guibg=NONE
+
+hi markdownCode ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3972a8 guibg=NONE
+hi markdownCodeDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi markdownCodeBlock ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3972a8 guibg=NONE
+
+hi markdownLinkText ctermfg=blue ctermbg=NONE cterm=underline guifg=#6e6ec4 guibg=NONE
+hi markdownUrl ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3f6969 guibg=NONE
+hi markdownUrlDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+hi markdownUrlTitle ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
+
+hi markdownBlockquote ctermfg=grey ctermbg=NONE cterm=italic guifg=#666666 guibg=NONE
+hi markdownListMarker ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi markdownRule ctermfg=grey ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
