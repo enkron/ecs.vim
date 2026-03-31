@@ -27,7 +27,7 @@ hi CursorLineNr ctermfg=black ctermbg=darkgray cterm=bold term=bold guifg=#96653
 hi Directory ctermfg=blue guifg=#6e6ec4 guibg=NONE
 hi ErrorMsg ctermfg=black ctermbg=red cterm=bold term=bold guifg=#000000 guibg=#ff0000
 hi WarningMsg ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi MatchParen ctermfg=darkcyan ctermbg=black cterm=bold term=bold guifg=#ffffff guibg=#990000
+hi MatchParen ctermfg=brown ctermbg=NONE cterm=bold,underline term=bold guifg=#96653a guibg=NONE gui=bold,undercurl guisp=#990000
 hi MoreMsg ctermfg=brown ctermbg=NONE guifg=#96653a guibg=NONE
 hi NonText ctermfg=grey guifg=#666666 guibg=NONE
 hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#96653a guibg=#2a2a2a
