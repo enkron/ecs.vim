@@ -33,14 +33,14 @@ hi NonText ctermfg=grey guifg=#666666 guibg=NONE
 hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#96653a guibg=#2a2a2a
 hi IncSearch ctermfg=black ctermbg=brown cterm=bold term=bold guifg=#000000 guibg=#96653a
 hi link CurSearch IncSearch
-hi StatusLine ctermfg=lightgray ctermbg=black guifg=#666666 guibg=#1a1a1a
+hi StatusLine ctermfg=lightgray ctermbg=black cterm=NONE guifg=#666666 guibg=#1a1a1a gui=NONE
 hi StatusLineNC ctermfg=darkgray ctermbg=black cterm=NONE guifg=#333333 guibg=#1a1a1a
-hi User1 ctermfg=black ctermbg=lightgray cterm=NONE guifg=#ffffff guibg=#1a1a1a
-hi User2 ctermfg=darkred ctermbg=lightgray cterm=bold guifg=#990000 guibg=#1a1a1a
-hi User3 ctermfg=black ctermbg=lightgray cterm=bold guifg=#ffffff guibg=#990000
+hi User1 ctermfg=white ctermbg=black cterm=NONE guifg=#ffffff guibg=#1a1a1a
+hi User2 ctermfg=darkred ctermbg=black cterm=bold guifg=#990000 guibg=#1a1a1a
+hi User3 ctermfg=white ctermbg=darkred cterm=bold guifg=#ffffff guibg=#990000
 hi User4 ctermfg=lightgray ctermbg=black cterm=bold guifg=#cccccc guibg=#1a1a1a
-hi User5 ctermfg=brown ctermbg=lightgray cterm=bold guifg=#96653a guibg=#1a1a1a
-hi User6 ctermfg=brown ctermbg=lightgray cterm=bold guifg=#666666 guibg=#1a1a1a
+hi User5 ctermfg=brown ctermbg=black cterm=bold guifg=#96653a guibg=#1a1a1a
+hi User6 ctermfg=brown ctermbg=black cterm=bold guifg=#666666 guibg=#1a1a1a
 hi VertSplit ctermfg=white ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg=NONE
 hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=NONE guibg=#2a2a2a
 hi SignColumn ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
