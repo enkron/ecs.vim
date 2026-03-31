@@ -42,7 +42,8 @@ hi User4 ctermfg=lightgray ctermbg=black cterm=bold guifg=#cccccc guibg=#1a1a1a
 hi User5 ctermfg=brown ctermbg=black cterm=bold guifg=#96653a guibg=#1a1a1a
 hi User6 ctermfg=brown ctermbg=black cterm=bold guifg=#666666 guibg=#1a1a1a
 hi VertSplit ctermfg=white ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg=NONE
-hi Visual ctermfg=darkcyan ctermbg=darkgrey cterm=bold term=bold guifg=NONE guibg=#2a2a2a
+hi Visual ctermfg=NONE ctermbg=darkgrey cterm=NONE term=NONE guifg=NONE guibg=#333333
+hi VisualNOS ctermfg=NONE ctermbg=darkgrey cterm=NONE term=NONE guifg=NONE guibg=#2a2a2a
 hi SignColumn ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
 hi FoldColumn ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
 hi ColorColumn ctermfg=NONE ctermbg=darkgray guifg=NONE guibg=#1a1a1a
