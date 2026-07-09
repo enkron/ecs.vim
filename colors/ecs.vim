@@ -12,6 +12,10 @@ set t_Co=256
 if has("termguicolors")
         set termguicolors
 endif
+if !has('gui_running')
+    let &t_Cs = "\e[4:3m"
+    let &t_Ce = "\e[4:0m"
+endif
 let g:colors_name = "ecs"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -102,10 +106,10 @@ hi Tag ctermfg=darkblue guifg=#3333ff guibg=NONE
 hi Delimiter ctermfg=brown guifg=#3972a8 guibg=NONE
 
 hi SpecialKey ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
-hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#990000
-hi SpellCap ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#3972a8
-hi SpellRare ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#3f6969
-hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=undercurl guisp=#666666
+hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#b3554a
+hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#3972a8
+hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#3f6969
+hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#666666
 
 hi Todo ctermfg=brown ctermbg=NONE cterm=bold,italic guifg=#96653a guibg=NONE
 hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
