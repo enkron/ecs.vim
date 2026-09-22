@@ -23,27 +23,27 @@ let g:colors_name = "ecs"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi Normal ctermfg=white ctermbg=NONE guifg=#ffffff guibg=NONE
 
-hi ModeMsg ctermfg=black ctermbg=white cterm=bold,italic guifg=#ffffff guibg=#96653a
+hi ModeMsg ctermfg=black ctermbg=white cterm=bold,italic guifg=#ffffff guibg=#3972a8
 hi Cursor ctermfg=NONE guifg=NONE guibg=NONE
 hi LineNr ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
 hi CursorLine ctermfg=NONE ctermbg=darkgray cterm=NONE term=NONE guifg=NONE guibg=#1a1a1a
-hi CursorLineNr ctermfg=black ctermbg=darkgray cterm=bold term=bold guifg=#96653a guibg=#1a1a1a
+hi CursorLineNr ctermfg=black ctermbg=darkgray cterm=bold term=bold guifg=#3972a8 guibg=#1a1a1a
 hi Directory ctermfg=blue guifg=#6e6ec4 guibg=NONE
 hi ErrorMsg ctermfg=black ctermbg=red cterm=bold term=bold guifg=#000000 guibg=#ff0000
 hi WarningMsg ctermfg=red ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi MatchParen ctermfg=brown ctermbg=NONE cterm=bold,underline term=bold guifg=#96653a guibg=NONE gui=bold,undercurl guisp=#990000
-hi MoreMsg ctermfg=brown ctermbg=NONE guifg=#96653a guibg=NONE
+hi MatchParen ctermfg=blue ctermbg=NONE cterm=bold,underline term=bold guifg=#3972a8 guibg=NONE gui=bold,undercurl guisp=#3e3b70
+hi MoreMsg ctermfg=blue ctermbg=NONE guifg=#3972a8 guibg=NONE
 hi NonText ctermfg=grey guifg=#666666 guibg=NONE
-hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#96653a guibg=#2a2a2a
-hi IncSearch ctermfg=black ctermbg=brown cterm=bold term=bold guifg=#000000 guibg=#96653a
+hi Search ctermfg=darkcyan ctermbg=darkgray cterm=bold term=bold guifg=#3972a8 guibg=#2a2a2a
+hi IncSearch ctermfg=black ctermbg=blue cterm=bold term=bold guifg=#000000 guibg=#3972a8
 hi link CurSearch IncSearch
 hi StatusLine ctermfg=lightgray ctermbg=black cterm=NONE guifg=#666666 guibg=#1a1a1a gui=NONE
 hi StatusLineNC ctermfg=darkgray ctermbg=black cterm=NONE guifg=#333333 guibg=#1a1a1a
 hi User1 ctermfg=white ctermbg=black cterm=NONE guifg=#ffffff guibg=#1a1a1a
-hi User2 ctermfg=darkred ctermbg=black cterm=bold guifg=#990000 guibg=#1a1a1a
-hi User3 ctermfg=white ctermbg=darkred cterm=bold guifg=#ffffff guibg=#990000
+hi User2 ctermfg=blue ctermbg=black cterm=bold guifg=#3972a8 guibg=#1a1a1a
+hi User3 ctermfg=white ctermbg=blue cterm=bold guifg=#ffffff guibg=#3972a8
 hi User4 ctermfg=lightgray ctermbg=black cterm=bold guifg=#cccccc guibg=#1a1a1a
-hi User5 ctermfg=brown ctermbg=black cterm=bold guifg=#96653a guibg=#1a1a1a
+hi User5 ctermfg=blue ctermbg=black cterm=bold guifg=#3972a8 guibg=#1a1a1a
 hi User6 ctermfg=brown ctermbg=black cterm=bold guifg=#666666 guibg=#1a1a1a
 hi VertSplit ctermfg=white ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg=NONE
 hi Visual ctermfg=NONE ctermbg=darkgrey cterm=NONE term=NONE guifg=NONE guibg=#333333
@@ -51,8 +51,8 @@ hi VisualNOS ctermfg=NONE ctermbg=darkgrey cterm=NONE term=NONE guifg=NONE guibg
 hi SignColumn ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
 hi FoldColumn ctermfg=darkgray ctermbg=NONE guifg=#666666 guibg=NONE
 hi ColorColumn ctermfg=NONE ctermbg=darkgray guifg=NONE guibg=#1a1a1a
-hi WildMenu ctermfg=black ctermbg=brown cterm=bold guifg=#000000 guibg=#96653a
-hi Question ctermfg=brown ctermbg=NONE guifg=#96653a guibg=NONE
+hi WildMenu ctermfg=black ctermbg=blue cterm=bold guifg=#000000 guibg=#3972a8
+hi Question ctermfg=blue ctermbg=NONE guifg=#3972a8 guibg=NONE
 hi TabLine ctermfg=darkgray ctermbg=black cterm=NONE guifg=#666666 guibg=#1a1a1a
 hi TabLineSel ctermfg=white ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
 hi TabLineFill ctermfg=NONE ctermbg=black guifg=NONE guibg=#1a1a1a
@@ -72,7 +72,7 @@ hi Boolean ctermfg=brown cterm=bold term=bold guifg=#965949 guibg=NONE
 hi Float ctermfg=brown cterm=bold term=bold guifg=#3972a8 guibg=NONE
 
 hi Pmenu ctermfg=grey ctermbg=black guifg=#666666 guibg=NONE
-hi PmenuSel ctermfg=darkblue ctermbg=black guifg=#96653a guibg=NONE
+hi PmenuSel ctermfg=darkblue ctermbg=black guifg=#3972a8 guibg=NONE
 
 hi Identifier ctermfg=darkblue ctermbg=NONE cterm=NONE term=NONE guifg=#3333ff guibg=NONE
 hi Function ctermfg=white cterm=bold guifg=#ffffff guibg=NONE
@@ -84,7 +84,7 @@ hi link Exception Statement
 hi link Label Statement
 
 hi Operator ctermfg=darkmagenta cterm=bold term=bold guifg=#3e3b70 guibg=NONE
-hi Keyword ctermfg=brown cterm=bold guifg=#96653a guibg=NONE
+hi Keyword ctermfg=blue cterm=bold guifg=#3972a8 guibg=NONE
 
 hi Macro ctermfg=blue guifg=#6e6ec4 guibg=NONE
 
@@ -111,7 +111,7 @@ hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=
 hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#3f6969
 hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#666666
 
-hi Todo ctermfg=brown ctermbg=NONE cterm=bold,italic guifg=#96653a guibg=NONE
+hi Todo ctermfg=blue ctermbg=NONE cterm=bold,italic guifg=#3972a8 guibg=NONE
 hi Error ctermfg=88 ctermbg=NONE cterm=italic guifg=#990000 guibg=NONE
 hi DiffAdd ctermfg=NONE ctermbg=22 guifg=NONE guibg=#1a2a1a
 hi DiffChange ctermfg=white ctermbg=brown guifg=#ffffff guibg=#3972a8
@@ -128,7 +128,7 @@ hi vimGroupName ctermfg=brown ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
 hi vimGroup ctermfg=brown ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
 
 " Markdown
-hi markdownH1 ctermfg=brown ctermbg=NONE cterm=bold guifg=#96653a guibg=NONE
+hi markdownH1 ctermfg=blue ctermbg=NONE cterm=bold guifg=#3972a8 guibg=NONE
 hi markdownH2 ctermfg=brown ctermbg=NONE cterm=bold guifg=#965949 guibg=NONE
 hi markdownH3 ctermfg=blue ctermbg=NONE cterm=bold guifg=#6e6ec4 guibg=NONE
 hi markdownH4 ctermfg=darkcyan ctermbg=NONE cterm=NONE guifg=#3f6969 guibg=NONE
@@ -151,14 +151,14 @@ hi markdownUrlDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 g
 hi markdownUrlTitle ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
 
 hi markdownBlockquote ctermfg=grey ctermbg=NONE cterm=italic guifg=#666666 guibg=NONE
-hi markdownListMarker ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi markdownListMarker ctermfg=blue ctermbg=NONE cterm=NONE guifg=#3972a8 guibg=NONE
 hi markdownRule ctermfg=grey ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
 
 " YAML
-hi yamlBlockMappingKey ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi yamlBlockMappingKey ctermfg=blue ctermbg=NONE cterm=NONE guifg=#3972a8 guibg=NONE
 hi link yamlFlowMappingKey yamlBlockMappingKey
 hi yamlKeyValueDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi yamlBlockCollectionItemStart ctermfg=brown ctermbg=NONE cterm=NONE guifg=#96653a guibg=NONE
+hi yamlBlockCollectionItemStart ctermfg=blue ctermbg=NONE cterm=NONE guifg=#3972a8 guibg=NONE
 hi yamlFlowIndicator ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
 hi yamlFlowString ctermfg=white ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
 hi yamlFlowStringDelimiter ctermfg=darkgray ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
