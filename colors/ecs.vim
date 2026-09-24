@@ -1,211 +1,303 @@
-" Vim color file
-" Maintainer:   Sergei Belokon <srj.belokon@gmail.com>
-" Repository:   https://github.com/enkron/ecs.vim
-" Last Change:  2026 Sep 24
+vim9script
+# Vim color file
+# Name:         ecs
+# Maintainer:   Sergei Belokon <srj.belokon@gmail.com>
+# Repository:   https://github.com/enkron/ecs.vim
+# Last Change:  2026 Sep 24
 
-set bg=dark
+set background=dark
 hi clear
-if exists("syntax_on")
+if exists('syntax_on')
     syntax reset
 endif
-let g:colors_name = "ecs"
+g:colors_name = 'ecs'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               General                                "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi Normal ctermfg=231 ctermbg=NONE guifg=#ffffff guibg=NONE
+########################################################################
+#                               Palette                                #
+########################################################################
+# name: [gui hex, nearest xterm-256 index]. Tints are blended into the
+# #000000 terminal background (Normal has no guibg), so they assume it.
+const p: dict<list<string>> = {
+    none:            ['NONE', 'NONE'],
 
-hi ModeMsg ctermfg=231 ctermbg=61 cterm=bold,italic guifg=#ffffff guibg=#3972a8
-hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
-hi LineNr ctermfg=241 ctermbg=NONE guifg=#666666 guibg=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE term=NONE guifg=NONE guibg=#1a1a1a
-hi CursorLineNr ctermfg=68 ctermbg=234 cterm=bold term=bold guifg=#5a93c8 guibg=#1a1a1a
-hi Directory ctermfg=104 ctermbg=NONE guifg=#8a8ae0 guibg=NONE
-hi ErrorMsg ctermfg=203 ctermbg=234 cterm=bold term=bold guifg=#ff5f5f guibg=#3a1414 gui=bold
-hi WarningMsg ctermfg=196 ctermbg=NONE guifg=#ff0000 guibg=NONE
-hi MatchParen ctermfg=68 ctermbg=NONE cterm=bold,underline term=bold guifg=#5a93c8 guibg=NONE gui=bold,undercurl guisp=#3e3b70
-hi MoreMsg ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi NonText ctermfg=241 ctermbg=NONE guifg=#666666 guibg=NONE
-" Background only (#3f6969 teal tint), so matches keep their syntax colors
-hi Search ctermfg=NONE ctermbg=237 cterm=NONE term=bold guifg=NONE guibg=#1f3d3d gui=NONE
-hi IncSearch ctermfg=231 ctermbg=61 cterm=bold term=bold guifg=#ffffff guibg=#3972a8
-hi link CurSearch IncSearch
-hi StatusLine ctermfg=241 ctermbg=234 cterm=NONE guifg=#666666 guibg=#1a1a1a gui=NONE
-hi StatusLineNC ctermfg=236 ctermbg=234 cterm=NONE guifg=#333333 guibg=#1a1a1a
-hi User1 ctermfg=231 ctermbg=234 cterm=NONE guifg=#ffffff guibg=#1a1a1a
-hi User2 ctermfg=68 ctermbg=234 cterm=bold guifg=#5a93c8 guibg=#1a1a1a
-hi User3 ctermfg=231 ctermbg=61 cterm=bold guifg=#ffffff guibg=#3972a8
-hi User4 ctermfg=252 ctermbg=234 cterm=bold guifg=#cccccc guibg=#1a1a1a
-hi User5 ctermfg=68 ctermbg=234 cterm=bold guifg=#5a93c8 guibg=#1a1a1a
-hi User6 ctermfg=241 ctermbg=234 cterm=bold guifg=#666666 guibg=#1a1a1a
-hi VertSplit ctermfg=231 ctermbg=NONE cterm=bold term=bold guifg=#ffffff guibg=NONE
-hi Visual ctermfg=NONE ctermbg=236 cterm=NONE term=NONE guifg=NONE guibg=#333333
-hi VisualNOS ctermfg=NONE ctermbg=235 cterm=NONE term=NONE guifg=NONE guibg=#2a2a2a
-hi SignColumn ctermfg=241 ctermbg=NONE guifg=#666666 guibg=NONE
-hi FoldColumn ctermfg=241 ctermbg=NONE guifg=#666666 guibg=NONE
-hi ColorColumn ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1a1a
-hi WildMenu ctermfg=231 ctermbg=61 cterm=bold guifg=#ffffff guibg=#3972a8
-hi Question ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi TabLine ctermfg=241 ctermbg=234 cterm=NONE guifg=#666666 guibg=#1a1a1a
-hi TabLineSel ctermfg=231 ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
-hi TabLineFill ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1a1a
-hi EndOfBuffer ctermfg=236 ctermbg=NONE guifg=#333333 guibg=NONE
-hi Conceal ctermfg=244 ctermbg=NONE guifg=#7f7f7f guibg=NONE
-hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1a1a1a
-hi QuickFixLine ctermfg=NONE ctermbg=237 cterm=bold guifg=NONE guibg=#263a52
-hi Ignore ctermfg=236 ctermbg=NONE guifg=#333333 guibg=NONE
-hi link LineNrAbove LineNr
-hi link LineNrBelow LineNr
-hi link CursorLineSign CursorLine
-hi link CursorLineFold CursorLine
-hi link StatusLineTerm StatusLine
-hi link StatusLineTermNC StatusLineNC
-hi link PopupNotification Pmenu
-hi ToolbarLine ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1a1a
-hi ToolbarButton ctermfg=231 ctermbg=237 cterm=bold guifg=#ffffff guibg=#263a52
-hi debugPC ctermfg=NONE ctermbg=237 guifg=NONE guibg=#263a52
-hi debugBreakpoint ctermfg=203 ctermbg=234 cterm=bold guifg=#ff5f5f guibg=#3a1414
-" Added/Changed/Removed: diff and git filetypes (Vim 9.1+)
-hi Added ctermfg=78 ctermbg=NONE guifg=#73c991 guibg=NONE
-hi Changed ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi Removed ctermfg=203 ctermbg=NONE guifg=#f06a6a guibg=NONE
+    # Neutrals
+    white:           ['#ffffff', '231'],
+    grey80:          ['#cccccc', '252'],
+    grey50:          ['#7f7f7f', '244'],
+    grey40:          ['#666666', '241'],
+    grey20:          ['#333333', '236'],
+    surface:         ['#1a1a1a', '234'],
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                         Generic Syntax Highlighting                  "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi Comment ctermfg=244 ctermbg=NONE cterm=italic guifg=#7f7f7f guibg=NONE
-hi SpecialComment ctermfg=252 ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
+    # Text accents, all >= 4.5:1 on black
+    blue:            ['#5a93c8', '68'],
+    indigo:          ['#8088ff', '105'],
+    violet:          ['#8a8ae0', '104'],
+    lavender:        ['#9a94d9', '104'],
+    teal:            ['#6fa3a3', '73'],
+    copper:          ['#c9826f', '173'],
+    red:             ['#f06a6a', '203'],
+    amber:           ['#d7af5f', '179'],
+    green:           ['#73c991', '78'],
 
-hi Constant ctermfg=104 ctermbg=NONE term=bold cterm=bold guifg=#8a8ae0 guibg=NONE
-hi String ctermfg=231 ctermbg=NONE cterm=italic guifg=#ffffff guibg=NONE
-hi Character ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi Number ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi Boolean ctermfg=173 ctermbg=NONE cterm=bold term=bold guifg=#c9826f guibg=NONE
-hi Float ctermfg=68 ctermbg=NONE cterm=bold term=bold guifg=#5a93c8 guibg=NONE
+    # Bright variants, only used by the :terminal ANSI palette
+    red_bright:      ['#ff8787', '210'],
+    green_bright:    ['#95e0ad', '115'],
+    amber_bright:    ['#f0cc80', '222'],
+    blue_bright:     ['#8ab4e0', '110'],
+    lavender_bright: ['#b8b0f0', '147'],
+    teal_bright:     ['#95c8c8', '116'],
 
-" Solid backing so completion and LSP hover popups do not float over code
-hi Pmenu ctermfg=252 ctermbg=234 cterm=NONE guifg=#cccccc guibg=#141820 gui=NONE
-hi PmenuSel ctermfg=231 ctermbg=237 cterm=bold guifg=#ffffff guibg=#263a52 gui=bold
-hi PmenuSbar ctermfg=NONE ctermbg=234 guifg=NONE guibg=#141820
-hi PmenuThumb ctermfg=NONE ctermbg=238 guifg=NONE guibg=#3a4050
-hi PmenuMatch ctermfg=104 ctermbg=234 cterm=bold guifg=#8a8ae0 guibg=#141820 gui=bold
-hi PmenuMatchSel ctermfg=104 ctermbg=237 cterm=bold guifg=#8f8fe0 guibg=#263a52 gui=bold
+    # Solid fills (mode message, current search match, statusline)
+    accent:          ['#3972a8', '61'],
 
-hi Identifier ctermfg=105 ctermbg=NONE cterm=NONE term=NONE guifg=#8088ff guibg=NONE
-hi Function ctermfg=231 ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
+    # Background tints
+    popup:           ['#141820', '234'],
+    thumb:           ['#3a4050', '238'],
+    selected:        ['#263a52', '237'],
+    visual:          ['#1f3550', '237'],
+    visual_nos:      ['#1a2b40', '236'],
+    search:          ['#1f3d3d', '237'],
+    ref_text:        ['#2a2f38', '236'],
+    ref_write:       ['#3b3563', '238'],
+    error_bg:        ['#3a1414', '234'],
+    diff_add:        ['#16302a', '235'],
+    diff_change:     ['#1a2a3d', '236'],
+    diff_delete:     ['#2a1418', '234'],
+    diff_delete_fg:  ['#5c3440', '238'],
+    diff_text:       ['#2e4a6e', '239'],
 
-hi Statement ctermfg=105 ctermbg=NONE guifg=#8088ff guibg=NONE
-hi link Conditional Statement
-hi link Repeat Statement
-hi link Exception Statement
-hi link Label Statement
+    # Underline (guisp) colors
+    spell_bad:       ['#b3554a', '131'],
+    indigo_dark:     ['#3e3b70', '239'],
+    teal_dark:       ['#3f6969', '59'],
+}
 
-hi Operator ctermfg=104 ctermbg=NONE cterm=bold term=bold guifg=#9a94d9 guibg=NONE
-hi Keyword ctermfg=68 ctermbg=NONE cterm=bold guifg=#5a93c8 guibg=NONE
+# Hi(group, fg, bg[, attr[, sp]]): fg, bg and sp are palette keys; attr is
+# a :hi attribute list (eg. 'bold,italic') applied to both cterm and gui.
+def Hi(group: string, fg: string, bg: string, attr = 'NONE', sp = '')
+    var cmd = $'hi {group} guifg={p[fg][0]} guibg={p[bg][0]} gui={attr}'
+        .. $' ctermfg={p[fg][1]} ctermbg={p[bg][1]} cterm={attr}'
+    if sp != ''
+        cmd ..= $' guisp={p[sp][0]}'
+    endif
+    execute cmd
+enddef
 
-hi Macro ctermfg=104 ctermbg=NONE guifg=#8a8ae0 guibg=NONE
+def Link(group: string, target: string)
+    execute $'hi! link {group} {target}'
+enddef
 
-hi PreProc ctermfg=105 ctermbg=NONE cterm=bold guifg=#8088ff guibg=NONE
-hi PreCondit ctermfg=104 ctermbg=NONE guifg=#8a8ae0 guibg=NONE
-hi link Include PreProc
-hi link Define PreProc
+########################################################################
+#                               General                                #
+########################################################################
+Hi('Normal', 'white', 'none')
 
-hi Type ctermfg=73 ctermbg=NONE guifg=#6fa3a3 guibg=NONE
-hi link Structure Type
-hi link Typedef Type
+Hi('ModeMsg', 'white', 'accent', 'bold,italic')
+Hi('Cursor', 'none', 'none')
+Hi('LineNr', 'grey40', 'none')
+Link('LineNrAbove', 'LineNr')
+Link('LineNrBelow', 'LineNr')
+Hi('CursorLine', 'none', 'surface')
+Hi('CursorLineNr', 'blue', 'surface', 'bold')
+Link('CursorLineSign', 'CursorLine')
+Link('CursorLineFold', 'CursorLine')
+Hi('CursorColumn', 'none', 'surface')
+Hi('ColorColumn', 'none', 'surface')
+Hi('Directory', 'violet', 'none')
+Hi('ErrorMsg', 'red', 'error_bg', 'bold')
+Hi('WarningMsg', 'amber', 'none')
+Hi('MatchParen', 'blue', 'none', 'bold,undercurl', 'indigo_dark')
+Hi('MoreMsg', 'blue', 'none')
+Hi('Question', 'blue', 'none')
+Hi('NonText', 'grey40', 'none')
+Hi('EndOfBuffer', 'grey20', 'none')
+Hi('Conceal', 'grey50', 'none')
+Hi('Ignore', 'grey20', 'none')
 
-hi Special ctermfg=68 ctermbg=NONE cterm=bold,italic term=bold guifg=#5a93c8 guibg=NONE
-hi StorageClass ctermfg=104 ctermbg=NONE cterm=bold term=bold guifg=#9a94d9 guibg=NONE
+# Search is background only (teal tint), so matches keep their syntax
+# colors; the current match stays a solid fill so it stands out.
+Hi('Search', 'none', 'search')
+Hi('IncSearch', 'white', 'accent', 'bold')
+Link('CurSearch', 'IncSearch')
 
-hi SpecialChar ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
-hi Tag ctermfg=105 ctermbg=NONE guifg=#8088ff guibg=NONE
-hi Delimiter ctermfg=68 ctermbg=NONE guifg=#5a93c8 guibg=NONE
+# Blue selection tint, kept dim enough that syntax colors stay readable
+Hi('Visual', 'none', 'visual')
+Hi('VisualNOS', 'none', 'visual_nos')
+Hi('QuickFixLine', 'none', 'selected', 'bold')
 
-hi SpecialKey ctermfg=68 ctermbg=NONE cterm=bold term=bold guifg=#5a93c8 guibg=NONE
-hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#b3554a
-hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#3972a8
-hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#3f6969
-hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl guifg=NONE guibg=NONE gui=undercurl guisp=#666666
+Hi('StatusLine', 'grey40', 'surface')
+Hi('StatusLineNC', 'grey20', 'surface')
+Link('StatusLineTerm', 'StatusLine')
+Link('StatusLineTermNC', 'StatusLineNC')
+Hi('User1', 'white', 'surface')
+Hi('User2', 'blue', 'surface', 'bold')
+Hi('User3', 'white', 'accent', 'bold')
+Hi('User4', 'grey80', 'surface', 'bold')
+Link('User5', 'User2')
+Hi('User6', 'grey40', 'surface', 'bold')
+Hi('VertSplit', 'white', 'none', 'bold')
+Hi('SignColumn', 'grey40', 'none')
+Hi('FoldColumn', 'grey40', 'none')
+Hi('Folded', 'white', 'none', 'bold')
+Hi('WildMenu', 'white', 'accent', 'bold')
+Hi('TabLine', 'grey40', 'surface')
+Hi('TabLineSel', 'white', 'none', 'bold')
+Hi('TabLineFill', 'none', 'surface')
+Hi('ToolbarLine', 'none', 'surface')
+Hi('ToolbarButton', 'white', 'selected', 'bold')
+Hi('Title', 'red', 'none', 'bold')
 
-hi Todo ctermfg=68 ctermbg=NONE cterm=bold,italic guifg=#5a93c8 guibg=NONE
-hi Error ctermfg=203 ctermbg=NONE cterm=italic guifg=#f06a6a guibg=NONE
-" Diff: dim background tints only, syntax colors stay readable; DiffText is
-" one step brighter than DiffChange to mark the changed part of the line
-hi DiffAdd ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#16302a gui=NONE
-hi DiffChange ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#1a2a3d gui=NONE
-hi DiffDelete ctermfg=238 ctermbg=234 cterm=NONE guifg=#5c3440 guibg=#2a1418 gui=NONE
-hi DiffText ctermfg=NONE ctermbg=239 cterm=NONE guifg=NONE guibg=#2e4a6e gui=NONE
-hi Folded ctermfg=231 ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE
-hi Title ctermfg=203 ctermbg=NONE cterm=bold guifg=#f06a6a guibg=NONE
-hi Underlined ctermfg=104 ctermbg=NONE cterm=underline guifg=#8a8ae0 guibg=NONE
+# Solid backing so completion and LSP hover popups do not float over code
+Hi('Pmenu', 'grey80', 'popup')
+Hi('PmenuSel', 'white', 'selected', 'bold')
+Hi('PmenuSbar', 'none', 'popup')
+Hi('PmenuThumb', 'none', 'thumb')
+Hi('PmenuMatch', 'violet', 'popup', 'bold')
+Hi('PmenuMatchSel', 'violet', 'selected', 'bold')
+Link('PopupNotification', 'Pmenu')
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                         Plugin Highlighting                          "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" yegappan/lsp symbol references (autoHighlight). Unset, they link to
-" Search/DiffChange/DiffDelete. Background only, so syntax colors show
-" through: steel blue for reads, muted indigo for writes,
-" slate for plain text matches, all well above CursorLine (#1a1a1a).
-hi LspTextRef ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#2a2f38 gui=NONE
-hi LspReadRef ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#263a52 gui=NONE
-hi LspWriteRef ctermfg=NONE ctermbg=238 cterm=NONE guifg=NONE guibg=#3b3563 gui=NONE
+# Diff: dim background tints only, syntax colors stay readable; DiffText is
+# one step brighter than DiffChange to mark the changed part of the line
+Hi('DiffAdd', 'none', 'diff_add')
+Hi('DiffChange', 'none', 'diff_change')
+Hi('DiffDelete', 'diff_delete_fg', 'diff_delete')
+Hi('DiffText', 'none', 'diff_text')
+# Added/Changed/Removed: diff and git filetypes (Vim 9.1+)
+Hi('Added', 'green', 'none')
+Hi('Changed', 'blue', 'none')
+Hi('Removed', 'red', 'none')
 
-" yegappan/lsp diagnostic signs. Unset, they link to ErrorMsg/Search/Pmenu,
-" which paint filled blocks in the sign column; colored glyphs only instead.
-hi LspDiagSignErrorText ctermfg=203 ctermbg=NONE cterm=bold guifg=#ff5f5f guibg=NONE gui=bold
-hi LspDiagSignWarningText ctermfg=179 ctermbg=NONE cterm=bold guifg=#d7af5f guibg=NONE gui=bold
-hi LspDiagSignInfoText ctermfg=104 ctermbg=NONE cterm=NONE guifg=#8a8ae0 guibg=NONE gui=NONE
-hi LspDiagSignHintText ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE gui=NONE
+Hi('SpellBad', 'none', 'none', 'undercurl', 'spell_bad')
+Hi('SpellCap', 'none', 'none', 'undercurl', 'accent')
+Hi('SpellRare', 'none', 'none', 'undercurl', 'teal_dark')
+Hi('SpellLocal', 'none', 'none', 'undercurl', 'grey40')
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                       Language Syntax Highlighting                   "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi vimGroupName ctermfg=68 ctermbg=NONE cterm=bold guifg=#5a93c8 guibg=NONE
-hi vimGroup ctermfg=68 ctermbg=NONE cterm=bold guifg=#5a93c8 guibg=NONE
+Hi('debugPC', 'none', 'selected')
+Hi('debugBreakpoint', 'red', 'error_bg', 'bold')
 
-" Markdown
-hi markdownH1 ctermfg=68 ctermbg=NONE cterm=bold guifg=#5a93c8 guibg=NONE
-hi markdownH2 ctermfg=173 ctermbg=NONE cterm=bold guifg=#c9826f guibg=NONE
-hi markdownH3 ctermfg=104 ctermbg=NONE cterm=bold guifg=#8a8ae0 guibg=NONE
-hi markdownH4 ctermfg=73 ctermbg=NONE cterm=NONE guifg=#6fa3a3 guibg=NONE
-hi link markdownH5 markdownH4
-hi link markdownH6 markdownH4
-hi markdownHeadingDelimiter ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+########################################################################
+#                     Generic Syntax Highlighting                      #
+########################################################################
+Hi('Comment', 'grey50', 'none', 'italic')
+Hi('SpecialComment', 'grey80', 'none', 'italic')
+Hi('Todo', 'blue', 'none', 'bold,italic')
 
-hi markdownBold ctermfg=252 ctermbg=NONE cterm=bold guifg=#cccccc guibg=NONE
-hi markdownItalic ctermfg=252 ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
-hi markdownBoldItalic ctermfg=252 ctermbg=NONE cterm=bold,italic guifg=#cccccc guibg=NONE
-hi markdownStrike ctermfg=241 ctermbg=NONE cterm=strikethrough guifg=#666666 guibg=NONE
+Hi('Constant', 'violet', 'none', 'bold')
+Hi('String', 'white', 'none', 'italic')
+Hi('Character', 'blue', 'none')
+Link('Number', 'Character')
+Hi('Float', 'blue', 'none', 'bold')
+Hi('Boolean', 'copper', 'none', 'bold')
 
-hi markdownCode ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5a93c8 guibg=NONE
-hi markdownCodeDelimiter ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi markdownCodeBlock ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5a93c8 guibg=NONE
+Hi('Identifier', 'indigo', 'none')
+Hi('Function', 'white', 'none', 'bold')
 
-hi markdownLinkText ctermfg=104 ctermbg=NONE cterm=underline guifg=#8a8ae0 guibg=NONE
-hi markdownUrl ctermfg=73 ctermbg=NONE cterm=NONE guifg=#6fa3a3 guibg=NONE
-hi markdownUrlDelimiter ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi markdownUrlTitle ctermfg=252 ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
+Hi('Statement', 'indigo', 'none')
+Link('Conditional', 'Statement')
+Link('Repeat', 'Statement')
+Link('Exception', 'Statement')
+Link('Label', 'Statement')
+Hi('Operator', 'lavender', 'none', 'bold')
+Hi('Keyword', 'blue', 'none', 'bold')
 
-hi markdownBlockquote ctermfg=244 ctermbg=NONE cterm=italic guifg=#7f7f7f guibg=NONE
-hi markdownListMarker ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5a93c8 guibg=NONE
-hi markdownRule ctermfg=241 ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
+Hi('PreProc', 'indigo', 'none', 'bold')
+Link('Include', 'PreProc')
+Link('Define', 'PreProc')
+Hi('PreCondit', 'violet', 'none')
+Link('Macro', 'PreCondit')
 
-" YAML
-hi yamlBlockMappingKey ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5a93c8 guibg=NONE
-hi link yamlFlowMappingKey yamlBlockMappingKey
-hi yamlKeyValueDelimiter ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi yamlBlockCollectionItemStart ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5a93c8 guibg=NONE
-hi yamlFlowIndicator ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi yamlFlowString ctermfg=252 ctermbg=NONE cterm=italic guifg=#cccccc guibg=NONE
-hi yamlFlowStringDelimiter ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi yamlDocumentStart ctermfg=241 ctermbg=NONE cterm=bold guifg=#666666 guibg=NONE
-hi link yamlDocumentEnd yamlDocumentStart
-hi yamlBool ctermfg=173 ctermbg=NONE cterm=bold guifg=#c9826f guibg=NONE
-hi link yamlNull yamlBool
-hi yamlAnchor ctermfg=73 ctermbg=NONE cterm=NONE guifg=#6fa3a3 guibg=NONE
-hi yamlAlias ctermfg=73 ctermbg=NONE cterm=italic guifg=#6fa3a3 guibg=NONE
-hi link yamlNodeTag yamlAnchor
-hi yamlBlockMappingMerge ctermfg=68 ctermbg=NONE cterm=bold guifg=#5a93c8 guibg=NONE
-hi link yamlFlowMappingMerge yamlBlockMappingMerge
-hi yamlMappingKeyStart ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
-hi yamlBlockScalarHeader ctermfg=241 ctermbg=NONE cterm=NONE guifg=#666666 guibg=NONE
+Hi('Type', 'teal', 'none')
+Link('Structure', 'Type')
+Link('Typedef', 'Type')
+Link('StorageClass', 'Operator')
+
+Hi('Special', 'blue', 'none', 'bold,italic')
+Link('SpecialChar', 'Character')
+Link('Delimiter', 'Character')
+Link('Tag', 'Statement')
+Hi('SpecialKey', 'blue', 'none', 'bold')
+
+Hi('Underlined', 'violet', 'none', 'underline')
+Hi('Error', 'red', 'none', 'italic')
+
+########################################################################
+#                         Plugin Highlighting                          #
+########################################################################
+# yegappan/lsp symbol references (autoHighlight). Unset, they link to
+# Search/DiffChange/DiffDelete. Background only, so syntax colors show
+# through: steel blue for reads, muted indigo for writes, slate for plain
+# text matches, all well above CursorLine (surface).
+Hi('LspTextRef', 'none', 'ref_text')
+Hi('LspReadRef', 'none', 'selected')
+Hi('LspWriteRef', 'none', 'ref_write')
+
+# yegappan/lsp diagnostic signs. Unset, they link to ErrorMsg/Search/Pmenu,
+# which paint filled blocks in the sign column; colored glyphs only instead.
+Hi('LspDiagSignErrorText', 'red', 'none', 'bold')
+Hi('LspDiagSignWarningText', 'amber', 'none', 'bold')
+Hi('LspDiagSignInfoText', 'violet', 'none')
+Hi('LspDiagSignHintText', 'grey40', 'none')
+
+########################################################################
+#                     Language Syntax Highlighting                     #
+########################################################################
+Hi('vimGroupName', 'blue', 'none', 'bold')
+Link('vimGroup', 'vimGroupName')
+
+# Markdown
+Hi('markdownH1', 'blue', 'none', 'bold')
+Hi('markdownH2', 'copper', 'none', 'bold')
+Hi('markdownH3', 'violet', 'none', 'bold')
+Hi('markdownH4', 'teal', 'none')
+Link('markdownH5', 'markdownH4')
+Link('markdownH6', 'markdownH4')
+Hi('markdownHeadingDelimiter', 'grey40', 'none')
+
+Hi('markdownBold', 'grey80', 'none', 'bold')
+Hi('markdownItalic', 'grey80', 'none', 'italic')
+Hi('markdownBoldItalic', 'grey80', 'none', 'bold,italic')
+Hi('markdownStrike', 'grey40', 'none', 'strikethrough')
+
+Hi('markdownCode', 'blue', 'none')
+Link('markdownCodeBlock', 'markdownCode')
+Hi('markdownCodeDelimiter', 'grey40', 'none')
+
+Hi('markdownLinkText', 'violet', 'none', 'underline')
+Hi('markdownUrl', 'teal', 'none')
+Link('markdownUrlDelimiter', 'markdownCodeDelimiter')
+Hi('markdownUrlTitle', 'grey80', 'none', 'italic')
+
+Hi('markdownBlockquote', 'grey50', 'none', 'italic')
+Link('markdownListMarker', 'markdownCode')
+Hi('markdownRule', 'grey40', 'none', 'bold')
+
+# YAML
+Hi('yamlBlockMappingKey', 'blue', 'none')
+Link('yamlFlowMappingKey', 'yamlBlockMappingKey')
+Link('yamlBlockCollectionItemStart', 'yamlBlockMappingKey')
+Hi('yamlKeyValueDelimiter', 'grey40', 'none')
+Link('yamlFlowIndicator', 'yamlKeyValueDelimiter')
+Link('yamlFlowStringDelimiter', 'yamlKeyValueDelimiter')
+Link('yamlMappingKeyStart', 'yamlKeyValueDelimiter')
+Link('yamlBlockScalarHeader', 'yamlKeyValueDelimiter')
+Hi('yamlFlowString', 'grey80', 'none', 'italic')
+Hi('yamlDocumentStart', 'grey40', 'none', 'bold')
+Link('yamlDocumentEnd', 'yamlDocumentStart')
+Hi('yamlBool', 'copper', 'none', 'bold')
+Link('yamlNull', 'yamlBool')
+Hi('yamlAnchor', 'teal', 'none')
+Link('yamlNodeTag', 'yamlAnchor')
+Hi('yamlAlias', 'teal', 'none', 'italic')
+Hi('yamlBlockMappingMerge', 'blue', 'none', 'bold')
+Link('yamlFlowMappingMerge', 'yamlBlockMappingMerge')
+
+########################################################################
+#                              :terminal                               #
+########################################################################
+# ANSI 0-15 for :terminal windows, from the same palette. 0 is 'surface'
+# rather than pure black so black-on-default text stays visible.
+g:terminal_ansi_colors = [
+    'surface', 'red', 'green', 'amber', 'blue', 'lavender', 'teal', 'grey80',
+    'grey40', 'red_bright', 'green_bright', 'amber_bright', 'blue_bright',
+    'lavender_bright', 'teal_bright', 'white',
+]->mapnew((_, name) => p[name][0])
