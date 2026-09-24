@@ -3,7 +3,7 @@ vim9script
 # Name:         ecs
 # Maintainer:   Sergei Belokon <srj.belokon@gmail.com>
 # Repository:   https://github.com/enkron/ecs.vim
-# Last Change:  2026 Sep 24
+# Last Change:  2026 Sep 25
 
 set background=dark
 hi clear
@@ -244,32 +244,67 @@ Hi('LspDiagSignHintText', 'grey40', 'none')
 Hi('vimGroupName', 'blue', 'none', 'bold')
 Link('vimGroup', 'vimGroupName')
 
-# Markdown
+# Markdown (runtime syntax/markdown.vim). Prose stays Normal and the markup
+# recedes: every piece of punctuation (#, *, _, ~~, `, [], (), <>) shares
+# one dim grey, since vimrc forces conceallevel=0 and it is always visible.
+# Emphasis is carried by attributes rather than color, so bold and italic
+# text is never dimmer than the text around it.
 Hi('markdownH1', 'blue', 'none', 'bold')
 Hi('markdownH2', 'copper', 'none', 'bold')
 Hi('markdownH3', 'violet', 'none', 'bold')
-Hi('markdownH4', 'teal', 'none')
-Link('markdownH5', 'markdownH4')
-Link('markdownH6', 'markdownH4')
+Hi('markdownH4', 'teal', 'none', 'bold')
+Hi('markdownH5', 'teal', 'none')
+Link('markdownH6', 'markdownH5')
 Hi('markdownHeadingDelimiter', 'grey40', 'none')
+Link('markdownHeadingRule', 'markdownHeadingDelimiter')
 
-Hi('markdownBold', 'grey80', 'none', 'bold')
-Hi('markdownItalic', 'grey80', 'none', 'italic')
-Hi('markdownBoldItalic', 'grey80', 'none', 'bold,italic')
-Hi('markdownStrike', 'grey40', 'none', 'strikethrough')
+Hi('markdownBold', 'none', 'none', 'bold')
+Hi('markdownItalic', 'none', 'none', 'italic')
+Hi('markdownBoldItalic', 'none', 'none', 'bold,italic')
+Hi('markdownStrike', 'grey50', 'none', 'strikethrough')
+Link('markdownBoldDelimiter', 'markdownHeadingDelimiter')
+Link('markdownItalicDelimiter', 'markdownHeadingDelimiter')
+Link('markdownBoldItalicDelimiter', 'markdownHeadingDelimiter')
+Link('markdownStrikeDelimiter', 'markdownHeadingDelimiter')
 
-Hi('markdownCode', 'blue', 'none')
+# Green is used nowhere else in prose, so code never reads as a heading,
+# link or list marker. Fenced blocks tagged in g:markdown_fenced_languages
+# get their own language's syntax and only share the fence delimiters.
+Hi('markdownCode', 'green', 'none')
 Link('markdownCodeBlock', 'markdownCode')
-Hi('markdownCodeDelimiter', 'grey40', 'none')
+Link('markdownCodeDelimiter', 'markdownHeadingDelimiter')
 
+# Link text is what the reader sees, so it gets the accent; the URL is
+# plumbing and stays plain. Reference ids and footnotes share the URL teal.
 Hi('markdownLinkText', 'violet', 'none', 'underline')
 Hi('markdownUrl', 'teal', 'none')
-Link('markdownUrlDelimiter', 'markdownCodeDelimiter')
+Link('markdownAutomaticLink', 'markdownUrl')
 Hi('markdownUrlTitle', 'grey80', 'none', 'italic')
+Link('markdownId', 'markdownUrl')
+Link('markdownIdDeclaration', 'markdownUrl')
+Link('markdownFootnote', 'markdownUrl')
+Link('markdownFootnoteDefinition', 'markdownUrl')
+Link('markdownLinkTextDelimiter', 'markdownHeadingDelimiter')
+Link('markdownLinkDelimiter', 'markdownHeadingDelimiter')
+Link('markdownIdDelimiter', 'markdownHeadingDelimiter')
+Link('markdownUrlDelimiter', 'markdownHeadingDelimiter')
+Link('markdownUrlTitleDelimiter', 'markdownHeadingDelimiter')
 
-Hi('markdownBlockquote', 'grey50', 'none', 'italic')
-Link('markdownListMarker', 'markdownCode')
+# The syntax matches only the '>' marker, not the quoted text
+Hi('markdownBlockquote', 'grey50', 'none', 'bold')
+Hi('markdownListMarker', 'blue', 'none', 'bold')
+Link('markdownOrderedListMarker', 'markdownListMarker')
 Hi('markdownRule', 'grey40', 'none', 'bold')
+Link('markdownEscape', 'SpecialChar')
+# markdownError flags every intra-word '_' (snake_case, file_names), which
+# CommonMark treats as literal text; unset, it paints them red.
+Hi('markdownError', 'none', 'none')
+
+# HTML, including inline HTML in markdown. Tag punctuation is dimmed like
+# the markdown markup; tag names and attributes keep their generic colors.
+Hi('htmlTag', 'grey40', 'none')
+Link('htmlEndTag', 'htmlTag')
+Link('htmlSpecialChar', 'SpecialChar')
 
 # YAML
 Hi('yamlBlockMappingKey', 'blue', 'none')
