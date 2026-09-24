@@ -290,15 +290,15 @@ Link('markdownIdDelimiter', 'markdownHeadingDelimiter')
 Link('markdownUrlDelimiter', 'markdownHeadingDelimiter')
 Link('markdownUrlTitleDelimiter', 'markdownHeadingDelimiter')
 
-# The syntax matches only the '>' marker, not the quoted text
+# The runtime syntax matches only the '>' marker; markdownBlockquoteText
+# (the quoted text) comes from after/syntax/markdown.vim in the dotfiles.
+# Bold, italic and code inside a quote keep their own highlighting.
 Hi('markdownBlockquote', 'grey50', 'none', 'bold')
+Hi('markdownBlockquoteText', 'grey80', 'none', 'italic')
 Hi('markdownListMarker', 'blue', 'none', 'bold')
 Link('markdownOrderedListMarker', 'markdownListMarker')
 Hi('markdownRule', 'grey40', 'none', 'bold')
 Link('markdownEscape', 'SpecialChar')
-# markdownError flags every intra-word '_' (snake_case, file_names), which
-# CommonMark treats as literal text; unset, it paints them red.
-Hi('markdownError', 'none', 'none')
 
 # HTML, including inline HTML in markdown. Tag punctuation is dimmed like
 # the markdown markup; tag names and attributes keep their generic colors.
